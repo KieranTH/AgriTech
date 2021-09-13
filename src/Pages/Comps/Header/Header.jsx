@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import '../Styling/main.css';
-import mySparcSVG from '../../../Images/MySparc-SVG.svg';
+//import mySparcSVG from '../../../Images/MySparc-SVG.svg';
 
 import { Link, withRouter } from "react-router-dom";
 
@@ -30,17 +30,17 @@ class Header extends React.Component{
       <header className="header-container">
         <nav className="header-data">
           <div className="header-logo">
-            <Link to="/">
-              <img className="img" src={mySparcSVG}/>
-            </Link>
+            <a href="/">
+              <img className="img" src={"/Images/agritech-logo.jpg"}/>
+              </a>
           </div>
           <div className="header-links">
             <ul className="header-list">
-              <Link className="header-item" to="/about"><li><a className={`header-title ${this.props.location.pathname ==="/about" ? "active" : ""}`}>About</a></li></Link>
-              <Link className="header-item" to="/what-we-do"><li><a className={`header-title ${this.props.location.pathname ==="/what-we-do" ? "active" : ""}`}>What we do</a></li></Link>
-              <Link className="header-item" to="/clusters"><li><a className={`header-title ${this.props.location.pathname ==="/clusters" ? "active" : ""}`}>Clusters</a></li></Link>
-              <Link className="header-item" to="/news"><li><a className={`header-title ${this.props.location.pathname ==="/news" ? "active" : ""}`}>News</a></li></Link>
-              <Link className="header-item" to="/join"><li><a className={`header-title ${this.props.location.pathname ==="/join" ? "active" : ""}`}>Join</a></li></Link>
+              <li><a className="header-item" href="#about">About</a></li>
+              <li><a className="header-item" href="#showcase">Showcase</a></li>
+              <li><a className="header-item" href="#the-clusters">Clusters</a></li>
+              <li><a className="header-item" href="#news">News</a></li>
+              <li><a className="header-item" href="#join">Join</a></li>
             </ul>
           </div>
           <div className="header-contact">
@@ -53,4 +53,4 @@ class Header extends React.Component{
   }
 }
 
-export default withRouter(Header);
+export default Header;

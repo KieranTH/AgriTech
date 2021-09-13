@@ -30,8 +30,8 @@
 }
 
 .img{
-  width: 150px;
-  height:auto;
+  width: 70px;
+  height:70px;
 }
 
 .header-links{
@@ -45,7 +45,8 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  width: 50%;
+  list-style-type: none;
+  width: 100%;
   margin: 0 auto;
 }
 .header-item{
@@ -56,6 +57,7 @@
   flex: 1 1 0px; /* Default */
   list-style-type: none;
   transition: 1.4s;
+  padding-right: 30px;
 }
 
 .header-item:visited{

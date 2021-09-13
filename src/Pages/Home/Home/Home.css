@@ -3,6 +3,10 @@
 }
 
 
+#home-page{
+  background-color: var(--background-color);
+}
+
 .home-container{
   position: relative;
   display: flex;
@@ -11,8 +15,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 3rem);
-  background-color: var(--background-color);
+  height: calc(100vh - 2rem);
+
 }
 
 .home-title{
@@ -20,4 +24,13 @@
 
 .home-info{
 
+}
+
+.slideshow-container{
+
+}
+
+.slideshow-content{
+  height: 100px;
+  width: 100%;
 }

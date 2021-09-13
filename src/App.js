@@ -7,10 +7,12 @@ import Footer from './Pages/Comps/Footer/Footer';
 
 import Home from './Pages/Home/Home/Home';
 import About from './Pages/About/About';
-import WhatWeDo from './Pages/WhatWeDo/WhatWeDo';
+import Showcase from './Pages/Showcase/Showcase';
 import Clusters from './Pages/Clusters/Clusters';
 import News from './Pages/News/News';
 import Join from './Pages/Join/Join';
+
+import Loading from './Pages/Comps/Loading/Loading';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -24,25 +26,23 @@ class App extends React.Component{
     super(props);
   }
 
-
   render(){
-    return (
-    <div className="App">
-      <Router>
+
+      return (
+      <div className="App">
         <Header/>
-        <Switch>
-          <Route path="/" exact component={()=> <Home/>}/>
-          <Route path="/about" exact component={()=><About/>}/>
-          <Route path="/what-we-do" exact component={()=><WhatWeDo/>}/>
-          <Route path="/clusters" exact component={()=><Clusters/>}/>
-          <Route path="/news" exact component={()=><News/>}/>
-          <Route path="/join" exact component={()=><Join/>}/>
-        </Switch>
+        <div className="content-wrap">
+          <Home/>
+          <About/>
+          <Showcase/>
+          <Clusters/>
+          <News/>
+          <Join/>
+        </div>
         <Footer/>
-      </Router>
-    </div>
-    );
-  }
+      </div>
+      );
+    }
 }
 
 export default App;
